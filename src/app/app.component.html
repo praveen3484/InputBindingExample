@@ -1,0 +1,23 @@
+<div class="container">
+    <h1>Details</h1>
+</div>
+<div class="container">       
+    <table class="table active table-striped">
+        <thead>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>EMAIL</th>
+            <th>DETAILS</th>
+        </thead>
+        <tbody >
+            <tr *ngFor="let childs of custom">
+                <td>{{childs.Id}}</td>
+                <td>{{childs.Name}}</td>
+                <td>{{childs.Email}}</td>
+                <td><button class="btn" (click)="logDetails(childs)" >Details</button></td>
+            </tr>
+        </tbody>
+        
+    </table>
+</div>
+<child-selector [customerDetail]="customer"></child-selector>
